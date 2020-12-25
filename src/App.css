@@ -1,0 +1,60 @@
+
+body { 
+  margin:0;
+  font-family: Georgia, serif;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+}  
+
+.flex-child:first-child {
+  margin-right: 20px;
+} 
+
+
+/* NAVBAR CSS */
+.centerLinks{
+  transform: translateX(175%);
+  webkit-transform: translateX(-175%);
+}
+
+/* HOMEPAGE CSS */
+
+.landingPageImg{
+  background-image: url("./Images/landingImg.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height:91.5vh;
+}
+
+.landingPageTarotLeft{
+  text-align: center;
+}
+
+.landingPageTarotRight{
+  text-align: center;
+  position: relative;
+  top: 55px;
+}
+
+.box {
+  width: 30%;
+  display:inline-block;
+  margin:10px 0;
+}
+
+
+.landingPageCrystalTrio {
+  white-space:nowrap;
+  text-align:center;
+}
+
+
+
+
