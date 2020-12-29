@@ -18,10 +18,27 @@ body {
 
 
 /* NAVBAR CSS */
+
+.ddMenu{
+  width: 100px;
+  height: 150px;
+  position: fixed;
+  left: 490px;
+  text-align: justify;
+  line-height:200%;
+  box-shadow:2px 3px 5px #999;
+}
+
+.ddText{
+  position: relative;
+  left: 15px;
+}
+
 .centerLinks{
   transform: translateX(175%);
   webkit-transform: translateX(-175%);
 }
+
 
 /* HOMEPAGE CSS */
 

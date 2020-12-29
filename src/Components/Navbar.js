@@ -1,28 +1,44 @@
-import React from 'react' 
+import React from 'react';
 import Logo from '../Images/logo.png'
+import { Link } from 'react-router-dom'
+import DecksDropdown from './Navigation/DecksDropdown'
+import { connect } from 'react-redux'
 
 class Navbar extends React.Component{
+  state = {
+    showMenu: false 
+  }
+
+  handleClick = () => {
+    this.setState({ showMenu: !this.state.showMenu })
+  }
+
     render(){
         return(
             <div className="navbar-fixed">
             <nav className="purple darken-3">
               <div className="nav-wrapper">
-                <a href="#!" className="brand-logo"><img src={Logo} alt="The Modern Witch Logo" width="100" /></a>
-                <ul className="left hide-on-med-and-down centerLinks"> {/*MAKE THIS MOBILE RESPONSIVE LATER */}
-                    <li><a href="" className="center">Decks</a></li>
-                    <li><a href="" className="center">Crystals</a></li>
-                    <li><a href="" className="center">Aroma Therapy</a></li>
+                <Link to="/" className="brand-logo"><img src={Logo} alt="The Modern Witch Logo" width="100" /></Link>
+                
+                <ul className="left hide-on-med-and-down centerLinks"> 
+                  <li onClick={() => this.handleClick()}><a>Deck</a></li>
+                  <li><a>Crystals</a></li>
+                  <li><a>Aroma Therapy</a></li>
                 </ul>
+                
                 <ul className="right hide-on-med-and-down">
-                    <li><a href=""><i className="material-icons">favorite</i></a></li>
-                    <li><a href=""><i className="material-icons">shopping_cart</i></a></li>
-                    <li><a href=""><i className="material-icons">account_circle</i></a></li>
+                  <li><Link to="/"><i className="material-icons">favorite</i></Link></li>
+                  <li><Link to="/"><i className="material-icons">shopping_cart</i></Link></li>
+                  <li><Link to="/"><i className="material-icons">account_circle</i></Link></li>
                 </ul>
               </div>
+              {
+                    this.state.showMenu ? <DecksDropdown /> : null
+              }
             </nav>
           </div>
         )
     }
 }
 
-export default Navbar 
+export default Navbar
