@@ -4,13 +4,18 @@ import { Link } from 'react-router-dom'
 import DecksDropdown from './Navigation/DecksDropdown'
 import { connect } from 'react-redux'
 
+
 class Navbar extends React.Component{
   state = {
     showMenu: false 
   }
 
-  handleClick = () => {
-    this.setState({ showMenu: !this.state.showMenu })
+  handleMouseEnter = () => {
+    this.setState({ showMenu: true })
+  }
+
+  handleMouseLeave = () => {
+    this.setState({ showMenu: false }) 
   }
 
     render(){
@@ -21,7 +26,7 @@ class Navbar extends React.Component{
                 <Link to="/" className="brand-logo"><img src={Logo} alt="The Modern Witch Logo" width="100" /></Link>
                 
                 <ul className="left hide-on-med-and-down centerLinks"> 
-                  <li onClick={() => this.handleClick()}><a>Deck</a></li>
+                  <li onMouseEnter={() => this.handleMouseEnter()} onMouseLeave={() => this.handleMouseLeave()}><a>Decks</a></li>
                   <li><a>Crystals</a></li>
                   <li><a>Aroma Therapy</a></li>
                 </ul>
@@ -33,7 +38,7 @@ class Navbar extends React.Component{
                 </ul>
               </div>
               {
-                    this.state.showMenu ? <DecksDropdown /> : null
+                    this.state.showMenu ? <div onMouseEnter={() => this.handleMouseEnter()} onMouseLeave={() => this.handleMouseLeave()} onClick={() => this.handleMouseLeave()}><DecksDropdown /></div> : null
               }
             </nav>
           </div>

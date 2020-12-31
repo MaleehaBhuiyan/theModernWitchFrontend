@@ -20,13 +20,23 @@ body {
 /* NAVBAR CSS */
 
 .ddMenu{
-  width: 100px;
-  height: 150px;
+  width: 410px;
+  height: 380px;
   position: fixed;
-  left: 490px;
+  left: 501px;
   text-align: justify;
   line-height:200%;
   box-shadow:2px 3px 5px #999;
+  line-height: 1;
+}
+
+#st-box{
+  float:left; 
+}
+
+#nd-box{
+  float:left; 
+  margin-left:55px; 
 }
 
 .ddText{
@@ -38,6 +48,7 @@ body {
   transform: translateX(175%);
   webkit-transform: translateX(-175%);
 }
+
 
 
 /* HOMEPAGE CSS */
@@ -70,6 +81,18 @@ body {
 .landingPageCrystalTrio {
   white-space:nowrap;
   text-align:center;
+}
+
+
+/* TAROT PAGE CSS */
+
+
+.tarotPageImg{
+  background-image: url("./Images/tarotHeader.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height:45vh;
 }
 
 
