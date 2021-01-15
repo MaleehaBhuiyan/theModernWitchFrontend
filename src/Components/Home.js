@@ -17,7 +17,7 @@ class Home extends React.Component{
                     <GreatThings text="Modern" />
                     <GreatThings text="Witch" /> */}
                     
-                    <GreatThings text="Welcome Modern Witch"/>
+                    {/* <GreatThings text="Welcome Modern Witch"/> */}
 
                     {/* <h1 style={{position:'relative', left:20}}>Welcome</h1>
                     <h1 style={{position:'relative', left:100}}>Modern</h1>
